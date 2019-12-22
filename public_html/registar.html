@@ -1,0 +1,110 @@
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <link href="css/loginstyle.css" rel="stylesheet" type="text/css"/>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <style type="text/css">
+        body{ font: 14px sans-serif; }
+        .wrapper{ width: 500px; padding: 20px; }
+    </style>
+    
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<script> $(function() {
+        $( "#datepicker" ).datepicker({
+            dateFormat : 'yy/mm/dd',
+            changeMonth : true,
+            changeYear : true,
+            yearRange: '-100y:c+nn',
+            maxDate: '-1d'
+        });
+    });
+   </script>
+  
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <div class="login-form" >
+    <div class="wrapper">
+        
+        <form action="" method="post">
+            <h2>Criar conta</h2>
+            <p>Preencha os campos para criar uma conta.</p>
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="username" class="form-control" placeholder="username" value="">
+                <span class="help-block"></span>
+            </div>    
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control" placeholder="password" value="">
+                <span class="help-block"></span>
+            </div>
+            <div class="form-group ">
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password" class="form-control" placeholder="confirma password" value="">
+                <span class="help-block"></span>
+            </div>
+            <div class="form-group ">
+                <label>Telefone</label>
+                <input type="text" name="telefone" class="form-control" placeholder="telefone" value="">
+                <span class="help-block"></span>
+            </div>
+            <div class="form-group ">
+                <label>E-mail</label>
+                <input type="text" name="email" class="form-control" placeholder="e-mail" value="">
+                <span class="help-block"></span>
+            </div>  
+            <div class="form-group ">
+                <label>Morada</label>
+                <input type="text" name="morada" class="form-control" placeholder="morada" value="">
+                <span class="help-block"></span>
+            </div> 
+            <div class="form-group">
+                <label> Região </lable>
+                
+                <span class="help-block"></span>
+                <select name='regiao'>
+                         <option> Selecionar </option>
+                         <option> Norte </option>
+                         <option> Sul </option>
+                         <option> Interior </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Sexo</label>
+                <div>
+                    <input type="radio" id="masculino" name="sexo" value="M"
+         checked>
+                    <label for="masculino">Masculino</label>
+                
+                    <input type="radio" id="feminino" name="sexo" value="F"
+         checked>
+                    <label for="femenino">Feminino</label>
+                </div>
+                
+            </div>
+            <div class="form-group ">
+                <label>Data de Nascimento</label>
+         
+                <input type="text" id="datepicker" class="form-control" placeholder="Choose" name="data_nascimento"  value="">
+                <span class="help-block"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Submeter" name="submeter">
+                <input type="reset" class="btn btn-default" value="Reset">
+            </div>
+            <p>Ja tem conta criada? <a href="login.html">Login aqui</a>.</p>
+        </form>
+    </div>  
+    </div>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</body>
+</html>
