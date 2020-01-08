@@ -86,7 +86,7 @@ require("config.php");
                             <ul >
                                 <li ><a href = "index.php" > Pagina Inicial </a ></li >
                                 <li ><a href = "novidades.php" > Novidades</a ></li >
-                                <li><a  href="#">   Produto  </a>  </li>
+                                <li><a  href="produto.php">   Produto  </a>  </li>
                                 <li ><a href = "#" > Promocões</a ></li >
                                 <li ><a href = "login.html" > Login</a ></li >
                                 <!--<li><a href = "registar.html" > registar</a ></li > -->
