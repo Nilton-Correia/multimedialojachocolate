@@ -76,7 +76,7 @@ span.psw {
 
 <h2>Login Form</h2>
 
-<form action="index.html">
+<form action="index.php">
   <div class="imgcontainer">
     <img src="img/bg-img/hero3.jpg" alt="Avatar" class="avatar">
   </div>
@@ -88,15 +88,15 @@ span.psw {
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
 
-    <a href="index.html"><button type="submit">Login</button> </a>
+    <a href="index.php"><button type="submit">Login</button> </a>
     <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
+      <input type="checkbox" checked="checked" name="remember"> Lembra-me
     </label>
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
     <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Não tem conta?<a href="registar.html">Registe agora</a></span>
+    <span class="psw">Nao tem conta<a href="registar.html">Registe agora</a></span>
 
   </div>
 </form>

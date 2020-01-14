@@ -1,14 +1,11 @@
-<?php
-$host="localhost";
-$port= 3306;
-$socket="";
-$user="root";
-$password="";
-$dbaname="dbmultimedia";
-$con = new mysqli($host, $user, $password, $dbaname, $port, $socket)
-    or die ('Could not connect to the database server' . mysqli_connect_error());
-if ($con->connect_error){
-    die ("Erro de Ligação de base de dados: ". $con->connect_error);
 
-}
-?>
+<?php
+//Dados do banco de dados
+define("DB_HOST", "localhost");
+define("DB_NAME", "dbmultimedia");
+define("DB_USER", "root");
+define("DB_PASS", "");
+
+//Conexao com Banco de Dados
+return new PDO(sprintf("mysql:host=%s;dbname=%s", DB_HOST, DB_NAME), DB_USER, DB_PASS);
+

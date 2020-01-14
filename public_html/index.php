@@ -1,10 +1,12 @@
 <?php
-
 session_start();
-require("config.php");
-
+if(!isset($_SESSION['carrinho'])){
+    $_SESSION['carrinho'] = array();
+}
+require_once "functions/product.php";
+$pdoConfig = require_once "config.php";
+$products = getProducts($pdoConfig);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,6 +25,7 @@ require("config.php");
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
 
 </head>
 
@@ -35,9 +38,6 @@ require("config.php");
 
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
-
-        <!-- Top Header Area -->
-
         <!-- Top Header Area -->
         <div class="top-header-area">
             <div class="h-100 d-md-flex justify-content-between align-items-center">
@@ -110,10 +110,14 @@ require("config.php");
 
                     <div class="dropdown" >
                         <div class="card-img" >
-                        <a href = "carinho.html" >
+                        <a href = "carrinho.php" >
                             <i class="fa fa-shopping-cart" ></i >
-                            <span > Carrinho</span >
-
+                            <span >Carrinho</span >
+                            <div class="qty">
+                            <?php echo count($_SESSION['cart']) ?>
+                            </a>
+                        </div>
+                        </div>
                         </a >
                 </nav >
             </div >
@@ -205,50 +209,27 @@ require("config.php");
                 </div >
             </div >
 
-            <div class="row" >
 
-                <!--Single Featured Property-->
-                <?php
-                $sql = "SELECT * FROM produto";
-                $result = $con->query($sql);
-                $result->num_rows;
-                if ($result->num_rows > 0) {
-                while($row = $result->fetch_assoc()) {
+            <div class="container">
+                <div class="row">
+                    <?php foreach($products as $product) : ?>
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-body">
+                                       <img src="imagens/<?php echo $product['imagens']?>">
+                                    <h4 class="card-title"><?php echo $product['nome']?></h4>
+                                    <h6 class="card-subtitle mb-2 text-muted">
+                                        <?php echo number_format($product['preco'], 2, ',', '.')?>€
+                                    </h6>
 
+                                    <a class="btn btn-primary" href="carrinho.php?acao=add&id=<?php echo $product['ID_Produto']?>" class="card-link">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
 
-                ?>
-                <div class="col-12 col-md-6 col-xl-4" >
-                    <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay = "100ms" >
-                        <!--Property Thumbnail-->
-                        <div class="property-thumb" >
-                            <a href = "#" >
-                                <img src = "imagens/<?php echo ''.$row['imagens'].'';?>" alt = "" >
-                            </a >
-                            <div class="list-price" >
-                            </div >
-                        </div >
-                        <!--Property Content-->
-                        <div class="property-content" >
-                            <h5 > <?php echo ''.$row['nome'].'';?> </h5 >
-
-                        </div >
-                    </div >
-                </div >
-<?php
-                }
-                }
-
-?>
-
-                <!--Single Featured Property-->
-
-                <!--Single Featured Property-->
-
-
-                <!--Single Featured Property-->
-
-            </div >
-        </div >
+                    <?php endforeach;?>
+                </div>
+            </div>
     </section >
 
      <section class="featured-properties-area section-padding-100-50" >
