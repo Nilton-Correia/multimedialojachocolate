@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(!isset($_SESSION['carrinho'])){
-    $_SESSION['carrinho'] = array();
+if(!isset($_SESSION['cart'])){
+    $_SESSION['cart'] = array();
 }
 require_once "functions/product.php";
 $pdoConfig = require_once "config.php";
@@ -19,6 +19,29 @@ $products = getProducts($pdoConfig);
 
     <!-- Title  -->
     <title>Santola Candy</title>
+    <style type="text/css">
+        body{ font: 14px sans-serif; text-align: center; }
+    </style>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
 
     <!-- Favicon  -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -39,26 +62,7 @@ $products = getProducts($pdoConfig);
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
         <!-- Top Header Area -->
-        <div class="top-header-area">
-            <div class="h-100 d-md-flex justify-content-between align-items-center">
-                <div class="email-address">
-                    <a href="mailto:santolacandy@gmail.com">santolacandy@gmail.com</a>
-                </div>
-                <ul class="header-links fa-pull-left">
-                    <li><a href="#"> Moeda: Euro</a></li>
-                </ul >
-                <div class="phone-number d-flex" >
-                    <div class="icon" >
-                        <img src = "img/icons/phone-call.png" alt = "" >
-                    </div >
-                    <div class="number" >
-                        <a href = "tel:+351 966705783" > +351 966705783 </a >
-                    </div >
-                </div >
-            </div >
-        </div >
 
-        </div>
         <!--Main Header Area-->
         <div class="main-header-area" id = "stickyHeader" >
             <div class="classy-nav-container breakpoint-off" >
@@ -88,8 +92,20 @@ $products = getProducts($pdoConfig);
                                 <li ><a href = "novidades.php" > Novidades</a ></li >
                                 <li><a  href="produto.php">   Produto  </a>  </li>
                                 <li ><a href = "#" > Promocões</a ></li >
-                                <li ><a href = "login.html" > Login</a ></li >
-                                <!--<li><a href = "registar.html" > registar</a ></li > -->
+                                <div class="dropdown">
+                                    <span>olá,<h5><?php echo htmlspecialchars($_SESSION["username"]); ?></h5></span>
+                                    <div class="dropdown-content">
+                                        <div class="page-header">
+                                            <p>
+                                                <a href="change-user-info.php" class="btn btn-warning">Alterar dados</a>
+                                                <a href="reset-password.php" class="btn btn-warning">Redefinir sua senha</a>
+                                                <a href="logout.php" class="btn btn-danger">Sair da sua conta</a>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
                             </ul >
                             <!--Search Form-->
                             <div class="south-search-form" >
@@ -114,11 +130,10 @@ $products = getProducts($pdoConfig);
                             <i class="fa fa-shopping-cart" ></i >
                             <span >Carrinho</span >
                             <div class="qty">
-                            <?php echo count($_SESSION['cart']) ?>
+                            <?php echo count($_SESSION['cart'])?>
                             </a>
                         </div>
                         </div>
-                        </a >
                 </nav >
             </div >
             </div >
@@ -162,9 +177,7 @@ $products = getProducts($pdoConfig);
             </div >
         </div >
     </section >
-    <!-- ##### Hero Area End ##### -->
 
-    <!-- ##### Advance Search Area Start ##### -->
     <div class="south-search-area" >
         <div class="container" >
             <div class="row" >
@@ -175,14 +188,9 @@ $products = getProducts($pdoConfig);
                         <!--Search Form-->
                         <form action = "#" method = "post" id = "advanceSearch" >
                             <div class="row" >
-
                                 <div class="col-12 col-md-4 col-lg-3" >
 
                                 </div >
-
-
-
-
                             </div >
                         </form >
                     </div >
@@ -191,19 +199,12 @@ $products = getProducts($pdoConfig);
         </div >
     </div >
 
-
-
-    <!-- ##### Advance Search Area End ##### -->
-
-
-
-    <!-- ##### Featured Properties Area Start ##### -->
     <section class="featured-properties-area section-padding-100-50" >
         <div class="container" >
             <div class="row" >
                 <div class="col-12" >
                     <div class="section-heading wow fadeInUp" >
-                        <h2 > Novidades</h2 >
+                        <h1 > Produtos</h1 >
                         <p ></p >
                     </div >
                 </div >
@@ -218,6 +219,7 @@ $products = getProducts($pdoConfig);
                                 <div class="card-body">
                                        <img src="imagens/<?php echo $product['imagens']?>">
                                     <h4 class="card-title"><?php echo $product['nome']?></h4>
+                                    <h6 class="card-text"><?php echo $product['Descricao']?> </h6>
                                     <h6 class="card-subtitle mb-2 text-muted">
                                         <?php echo number_format($product['preco'], 2, ',', '.')?>€
                                     </h6>
