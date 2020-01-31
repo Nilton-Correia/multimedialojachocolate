@@ -4,8 +4,8 @@ session_start();
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"])){
-    if($_SESSION["loggedin"] == true && $_SESSION["tipo_user"]=="cliente") {
-        header("location: welcome.php");
+    if($_SESSION["loggedin"] == true && $_SESSION["tipo_user"]=="admin") {
+        header("location: index.php");
     }
 }
 
@@ -70,7 +70,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;
 
                             // Redirect user to welcome page
-                                header("location: welcome.php");
+                                header("location: index.php");
 
 
 

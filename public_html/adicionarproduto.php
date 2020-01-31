@@ -4,12 +4,12 @@ require_once("config.php");
 
 
 if(isset($_POST['nome'])){
-    if(!empty($_POST['nome'])||!empty($_POST['preco'])||!empty($_POST['imagens'])||!empty($_POST['desconto'])||!empty($_POST['Descricao'])) {
+    if(!empty($_POST['nome'])||!empty($_POST['preco'])||!empty($_POST['imagens'])||!empty($_POST['desconto'])||!empty($_POST['Descricao'])||!empty($_POST['Categoria_ID_Categoria'])) {
         $nome = $_POST['nome'];
         $preco = $_POST['preco'];
         $descricao = $_POST['Descricao'];
         $desconto = $_POST['desconto'];
-
+        $Categoria_ID_Categoria = $_POST['Categoria_ID_Categoria'];
         print_r($_FILES);
         $imagens = $_FILES['imagens'];
 
@@ -24,11 +24,11 @@ if(isset($_POST['nome'])){
 
         $allowed = array('jpg', 'jpeg', 'png', 'pdf');
 
-        $sql = "INSERT INTO produto(nome, preco, imagens, desconto, Descricao) VALUES ('$nome','$preco','$descricao','$desconto','" . $imagens['name'] . "')";
+        $sql = "INSERT INTO produto(nome, preco, Descricao, Categoria_ID_Categoria , desconto, imagens) VALUES ('$nome','$preco','$descricao','$Categoria_ID_Categoria','$desconto','".$imagens['name']."')";
         if (!mysqli_query($con, $sql)) {
             print_r(mysqli_error($con));
 
-            $result = mysqli_query($con, "SELECT * FROM produto");
+            $result = mysqli_query($con, "SELECT * FROM produto inner join Categoria on  produto.Categoria_ID_Categoria= Categoria.Categoria_ID_Categoria  ");
 
             if (in_array($imagensActualExt, $allowed)) {
                 if ($imagensError === 0) {
@@ -97,24 +97,20 @@ if(isset($_POST['nome'])){
                     </div>
                     <div class="field">
                         <div class="control">
-                            <input name="ID_Produto" class="input is-large" type="number" placeholder="ID_Produto">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="control">
                             <input name="Descricao" class="input is-large" type="text" placeholder="Descricao do Produto">
                         </div>
                     </div>
                     <div class="field">
                         <div class="control">
-                            <input name="desconto" class="input is-large" type="text" placeholder="desconto">
+                            <input name="desconto" type="text" class="input is-large"  placeholder="desconto">
                         </div>
                     </div>
                     <div class="field">
                         <div class="control">
-                            <input name="Categoria_ID_Categoria" class="input is-large" type="number" placeholder="Categoria_ID_Categoria">
+                            <input name="Categoria_ID_Categoria" type="text" class="input is-large" placeholder="id_categoria">
                         </div>
                     </div>
+
                     <div>
                         <input type="file" name="imagens">
                     </div>

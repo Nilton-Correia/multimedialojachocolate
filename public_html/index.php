@@ -91,7 +91,7 @@ $products = getProducts($pdoConfig);
                                 <li ><a href = "index.php" > Pagina Inicial </a ></li >
                                 <li ><a href = "novidades.php" > Novidades</a ></li >
                                 <li><a  href="produto.php">   Produto  </a>  </li>
-                                <li ><a href = "#" > Promocões</a ></li >
+                                <li ><a href = "login.php" >Aderir/Sessação</a ></li >
                                 <div class="dropdown">
                                     <span>olá,<h5><?php echo htmlspecialchars($_SESSION["username"]); ?></h5></span>
                                     <div class="dropdown-content">
