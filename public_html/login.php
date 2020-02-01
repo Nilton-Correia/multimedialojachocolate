@@ -5,7 +5,9 @@ session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"])){
     if($_SESSION["loggedin"] == true && $_SESSION["tipo_user"]=="admin") {
-        header("location: index.php");
+        header("location: welcome.php");
+    }else{
+        header("location: administrar/adminis/ltr/index.html");
     }
 }
 
@@ -59,7 +61,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     // Bind result variables
                     mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password, $tipo);
                     if(mysqli_stmt_fetch($stmt)){
-                        if(password_verify($password, $hashed_password)){
+                        if(password_verify($password, $hashed_password)) {
                             // Password is correct, so start a new session
                             session_start();
 
@@ -70,11 +72,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;
 
                             // Redirect user to welcome page
-                                header("location: index.php");
+                            if($tipo=="adimin") {
+
+                                header("location: welcome.php");
+                            }else{
+                                header("location:administrar/adminis/ltr/index.html");
+                            }
+
+                        }
 
 
-
-                        }else{
+                        else{
                             // Display an error message if password is not valid
                             $password_err = "A senha que você digitou não era válida.";
                         }
@@ -257,26 +265,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </div >
 </section >
 
-<div class="south-search-area" >
-    <div class="container" >
-        <div class="row" >
-            <div class="col-12" >
-                <div class="advanced-search-form" >
-                    <!--Search Title-->
 
-                    <!--Search Form-->
-                    <form action = "#" method = "post" id = "advanceSearch" >
-                        <div class="row" >
-                            <div class="col-12 col-md-4 col-lg-3" >
-                                \
-                            </div >
-                        </div >
-                    </form >
-                </div >
-            </div >
-        </div >
-    </div >
-</div
 <div class="wrapper">
     <h2>Entrar</h2>
     <p>Preencha suas credenciais para fazer login.</p>

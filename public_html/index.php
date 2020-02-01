@@ -93,7 +93,7 @@ $products = getProducts($pdoConfig);
                                 <li><a  href="produto.php">   Produto  </a>  </li>
                                 <li ><a href = "login.php" >Aderir/Sessação</a ></li >
                                 <div class="dropdown">
-                                    <span>olá,<h5><?php echo htmlspecialchars($_SESSION["username"]); ?></h5></span>
+
                                     <div class="dropdown-content">
                                         <div class="page-header">
                                             <p>
@@ -166,38 +166,10 @@ $products = getProducts($pdoConfig);
                 </div >
             </div >
             <!--Single Hero Slide-->
-            <div class="single-hero-slide bg-img" style = "background-image: url(imagens/cafe-de-chocolate-2-1024x683.jpeg);" >
-                <div class="container h-100" >
-                    <div class="row h-100 align-items-center" >
-                        <div class="col-12" >
 
-                        </div >
-                    </div >
-                </div >
-            </div >
         </div >
     </section >
 
-    <div class="south-search-area" >
-        <div class="container" >
-            <div class="row" >
-                <div class="col-12" >
-                    <div class="advanced-search-form" >
-                        <!--Search Title-->
-
-                        <!--Search Form-->
-                        <form action = "#" method = "post" id = "advanceSearch" >
-                            <div class="row" >
-                                <div class="col-12 col-md-4 col-lg-3" >
-
-                                </div >
-                            </div >
-                        </form >
-                    </div >
-                </div >
-            </div >
-        </div >
-    </div >
 
     <section class="featured-properties-area section-padding-100-50" >
         <div class="container" >
