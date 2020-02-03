@@ -8,7 +8,7 @@ require_once 'config.php';
 
 // if session is not set this will redirect to login page
 if( !isset($_SESSION['users']) ) {
-    header("Location: index.php");
+    header("Location: indexadmin.php");
     exit;
 }
 

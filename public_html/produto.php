@@ -88,12 +88,14 @@ $products = getProducts($pdoConfig);
                     <!--Nav Start-->
                     <div class="classynav" >
                         <ul >
-                            <li ><a href = "index.php" > Pagina Inicial </a ></li >
+                            <li ><a href = "welcome.php" > Pagina Inicial </a ></li >
                             <li ><a href = "novidades.php" > Novidades</a ></li >
                             <li><a  href="produto.php">   Produto  </a>  </li>
                             <li ><a href = "#" > Promocões</a ></li >
                             <div class="dropdown">
-                                <span> Olá<h5><?php echo htmlspecialchars($_SESSION["username"]); ?></h5></span>
+                                <span> <h5><?php if(isset($_SESSION["loggedin"])){
+                                            echo 'Olá '.htmlspecialchars($_SESSION["username"]);
+                                        } ?></h5></span>
                                 <div class="dropdown-content">
                                     <div class="page-header">
                                         <p>

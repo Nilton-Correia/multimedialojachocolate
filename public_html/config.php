@@ -2,12 +2,12 @@
 <?php
 //Dados do banco de dados
 define("DB_HOST", "localhost");
-define("DB_NAME", "dbmultimedia(1jc)");
+define("DB_NAME", "dbmultimedia");
 define("DB_USER", "root");
 define("DB_PASS", "");
 
 
-$con = mysqli_connect("localhost","root","","dbmultimedia(1jc)");
+$con = mysqli_connect("localhost","root","","dbmultimedia");
 if (mysqli_connect_errno()){
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
     die();

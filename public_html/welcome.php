@@ -4,10 +4,18 @@ session_start();
 
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: index.php");
+    header("location: indexadmin.php");
 
     exit;
 }
+
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = array();
+}
+require_once "functions/product.php";
+$pdoConfig = require_once "config.php";
+$products = getProducts($pdoConfig);
+
 ?>
 
 <!DOCTYPE html>
@@ -119,8 +127,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         </ul >
                         <!--Search Form-->
                         <div class="south-search-form" >
-                            <form action = "#" method = "post" >
-                                <input type = "search" name = "search" id = "search" placeholder = "Search Anything ..." >
+                            <form action = "pesquisa.php" method = "post" >
+                                <input type = "search" name = "pesquisa"  placeholder = "Pequise" >
                                 <button type = "submit" ><i class="fa fa-search" aria-hidden = "true" ></i ></button >
                             </form >
                         </div >
@@ -227,7 +235,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     <div class="col-4">
                         <div class="card">
                             <div class="card-body">
-                                <img src="imagens/<?php echo $product['imagens']?>">
+                                <img src="imagens/<?php echo $product['imagens']?>" width="400px" height="400px" alt="">
                                 <h4 class="card-title"><?php echo $product['nome']?></h4>
                                 <h5 class="card-text"> <?php echo $product['Descricao']?></h5>
                                 <h6 class="card-subtitle mb-2 text-muted">
