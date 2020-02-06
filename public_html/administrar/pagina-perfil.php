@@ -11,10 +11,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
     <title>Xtreme Admin Template - The Ultimate Multipurpose admin template</title>
     <!-- Custom CSS -->
-    <link href="../../dist/css/style.min.css" rel="stylesheet">
+    <link href="dist/css/style.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -51,17 +51,17 @@
                     <b class="logo-icon">
                         <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                         <!-- Dark Logo icon -->
-                        <img src="../../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                        <img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
                         <!-- Light Logo icon -->
-                        <img src="../../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                        <img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
                     </b>
                     <!--End Logo icon -->
                     <!-- Logo text -->
                     <span class="logo-text">
                              <!-- dark Logo text -->
-                             <img src="../../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                             <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" />
                         <!-- Light Logo text -->
-                             <img src="../../assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
+                             <img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
                         </span>
                 </a>
                 <!-- ============================================================== -->
@@ -95,7 +95,7 @@
                     <!-- User profile and search -->
                     <!-- ============================================================== -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
+                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
                         <div class="dropdown-menu dropdown-menu-right user-dd animated">
                             <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
                             <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i> My Balance</a>
@@ -125,7 +125,7 @@
                     <li>
                         <!-- User Profile-->
                         <div class="user-profile d-flex no-block dropdown m-t-20">
-                            <div class="user-pic"><img src="../../assets/images/users/1.jpg" alt="users" class="rounded-circle" width="40" /></div>
+                            <div class="user-pic"><img src="assets/images/users/1.jpg" alt="users" class="rounded-circle" width="40" /></div>
                             <div class="user-content hide-menu m-l-10">
                                 <a href="javascript:void(0)" class="" id="Userdd" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <h5 class="m-b-0 user-name font-medium">Steave Jobs <i class="fa fa-angle-down"></i></h5>
@@ -146,12 +146,14 @@
                     </li>
                     <li class="p-15 m-t-10"><a href="javascript:void(0)" class="btn btn-block create-btn text-white no-block d-flex align-items-center"><i class="fa fa-plus-square"></i> <span class="hide-menu m-l-5">Create New</span> </a></li>
                     <!-- User Profile-->
-                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.html" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="indexadmin.php" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="pages-profile.html" aria-expanded="false"><i class="mdi mdi-account-network"></i><span class="hide-menu">Profile</span></a></li>
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="table-basic.html" aria-expanded="false"><i class="mdi mdi-border-all"></i><span class="hide-menu">Table</span></a></li>
-                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="icon-material.html" aria-expanded="false"><i class="mdi mdi-face"></i><span class="hide-menu">Icon</span></a></li>
-                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="starter-kit.html" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Blank</span></a></li>
-                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="error-404.html" aria-expanded="false"><i class="mdi mdi-alert-outline"></i><span class="hide-menu">404</span></a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="adicionarproduto.php" aria-expanded="false"><i class="mdi mdi-face"></i><span class="hide-menu">Icon</span></a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="removerproduto.php" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Blank</span></a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="editar-utilizador.php" aria-expanded="false"><i class="mdi mdi-alert-outline"></i><span class="hide-menu">404</span></a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="eliminar-utilizador.php" aria-expanded="false"><i class="mdi mdi-border-all"></i><span class="hide-menu">Table</span></a></li>
+
                     <li class="text-center p-40 upgrade-btn">
                         <a href="https://wrappixel.com/templates/xtremeadmin/" class="btn btn-block btn-danger text-white" target="_blank">Upgrade to Pro</a>
                     </li>
@@ -185,12 +187,7 @@
                         </nav>
                     </div>
                 </div>
-                <div class="col-7">
-                    <div class="text-right upgrade-btn">
-                        <a href="https://wrappixel.com/templates/xtremeadmin/" class="btn btn-danger text-white" target="_blank">Upgrade to Pro</a>
-                    </div>
-                </div>
-            </div>
+
         </div>
         <!-- ============================================================== -->
         <!-- End Bread crumb and right sidebar toggle -->
@@ -203,112 +200,62 @@
             <!-- Start Page Content -->
             <!-- ============================================================== -->
             <!-- Row -->
-            <div class="row">
-                <!-- Column -->
-                <div class="col-lg-4 col-xlg-3 col-md-5">
-                    <div class="card">
-                        <div class="card-body">
-                            <center class="m-t-30"> <img src="../../assets/images/users/5.jpg" class="rounded-circle" width="150" />
-                                <h4 class="card-title m-t-10">Santola-Candy</h4>
-                                <h6 class="card-subtitle">Accoubts Manager Amix corp</h6>
-                                <div class="row text-center justify-content-md-center">
-                                    <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-people"></i> <font class="font-medium">254</font></a></div>
-                                    <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-picture"></i> <font class="font-medium">54</font></a></div>
-                                </div>
-                            </center>
-                        </div>
-                        <div>
-                            <hr> </div>
-                        <div class="card-body"> <small class="text-muted">Email address </small>
-                            <h6>santolacandy@gmail.com</h6> <small class="text-muted p-t-30 db">Phone</small>
-                            <h6>+35 900000000</h6> <small class="text-muted p-t-30 db">Address</small>
-                            <h6>71 Pilgrim Avenue Chevy Chase, MD 20815</h6>
-                            <div class="map-box">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d470029.1604841957!2d72.29955005258641!3d23.019996818380896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C+Gujarat!5e0!3m2!1sen!2sin!4v1493204785508" width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
-                            </div> <small class="text-muted p-t-30 db">Social Profile</small>
-                            <br/>
-                            <button class="btn btn-circle btn-secondary"><i class="fab fa-facebook-f"></i></button>
-                            <button class="btn btn-circle btn-secondary"><i class="fab fa-twitter"></i></button>
-                            <button class="btn btn-circle btn-secondary"><i class="fab fa-youtube"></i></button>
-                        </div>
+
+        <div class="container-fluid">
+
+            <!-- DataTales Example -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Perfil do Administrador
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addadminprofile">
+                            Add Admin Profile
+                        </button>
+                    </h6>
+                </div>
+
+                <div class="card-body">
+
+                    <div class="table-responsive">
+
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th> ID </th>
+                                <th> Username </th>
+                                <th>Email </th>
+                                <th>Password</th>
+                                <th>EDIT </th>
+                                <th>DELETE </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            <tr>
+                                <td> 1 </td>
+                                <td> Funda of WEb IT</td>
+                                <td> funda@example.com</td>
+                                <td> *** </td>
+                                <td>
+                                    <form action="" method="post">
+                                        <input type="hidden" name="edit_id" value="">
+                                        <button  type="submit" name="edit_btn" class="btn btn-success"> EDIT</button>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="" method="post">
+                                        <input type="hidden" name="delete_id" value="">
+                                        <button type="submit" name="delete_btn" class="btn btn-danger"> DELETE</button>
+                                    </form>
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
                     </div>
                 </div>
-                <!-- Column -->
-                <!-- Column -->
-                <div class="col-lg-8 col-xlg-9 col-md-7">
-                    <div class="card">
-                        <div class="card-body">
-                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                                <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                                    <label>Utilizador</label>
-                                    <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
-                                    <span class="help-block"><?php echo $username_err; ?></span>
-                                </div>
-
-                                <div class="form-group <?php echo (!empty($nome_err)) ? 'has-error' : ''; ?>">
-                                    <label>Nome</label>
-                                    <input type="text" name="nome" class="form-control" value="<?php echo $nome; ?>">
-                                    <span class="help-block"><?php echo $nome_err; ?></span>
-                                </div>
-
-                                <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
-                                    <label>Email</label>
-                                    <input type="email" name="email" class="form-control" value="<?php echo $email; ?>">
-                                    <span class="help-block"><?php echo $email_err; ?></span>
-                                </div>
-
-                                <div class="form-group <?php echo (!empty($phone_err)) ? 'has-error' : ''; ?>">
-                                    <label>Telefone</label>
-                                    <input type="text" name="phone" class="form-control" value="<?php echo $phone; ?>">
-                                    <span class="help-block"><?php echo $phone_err; ?></span>
-                                </div>
-
-                                <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                                    <label>Password</label>
-                                    <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
-                                    <span class="help-block"><?php echo $password_err; ?></span>
-                                </div>
-                                <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
-                                    <label>Confirme a Senha</label>
-                                    <input type="password" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>">
-                                    <span class="help-block"><?php echo $confirm_password_err; ?></span>
-                                </div>
-
-                                <div class="form-group">
-                                    <div class="form-group">
-                                        <label class="col-sm-12">Select Country</label>
-                                        <div class="col-sm-12">
-                                            <select class="form-control form-control-line">
-                                                <option>London</option>
-                                                <option>India</option>
-                                                <option>Usa</option>
-                                                <option>Canada</option>
-                                                <option>Thailand</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <input type="submit" class="btn btn-primary" value="Submit">
-                                    <input type="reset" class="btn btn-default" value="Reset">
-                                </div>
-                                <p>Já tem uma conta? <a href="login.php">Entre aqui</a>.</p>
-                            </form>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
             </div>
-            <!-- Row -->
-            <!-- ============================================================== -->
-            <!-- End PAge Content -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- Right sidebar -->
-            <!-- ============================================================== -->
-            <!-- .right-sidebar -->
-            <!-- ============================================================== -->
-            <!-- End Right sidebar -->
-            <!-- ============================================================== -->
+
         </div>
         <!-- ============================================================== -->
         <!-- End Container fluid  -->
@@ -333,17 +280,17 @@
 <!-- ============================================================== -->
 <!-- All Jquery -->
 <!-- ============================================================== -->
-<script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="assets/libs/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap tether Core JavaScript -->
-<script src="../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
-<script src="../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../../dist/js/app-style-switcher.js"></script>
+<script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
+<script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="dist/js/app-style-switcher.js"></script>
 <!--Wave Effects -->
-<script src="../../dist/js/waves.js"></script>
+<script src="dist/js/waves.js"></script>
 <!--Menu sidebar -->
-<script src="../../dist/js/sidebarmenu.js"></script>
+<script src="dist/js/sidebarmenu.js"></script>
 <!--Custom JavaScript -->
-<script src="../../dist/js/custom.js"></script>
+<script src="dist/js/custom.js"></script>
 </body>
 
 </html>

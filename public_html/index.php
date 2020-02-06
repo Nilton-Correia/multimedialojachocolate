@@ -109,12 +109,10 @@ $products = getProducts($pdoConfig);
                             </ul >
                             <!--Search Form-->
                             <div class="south-search-form" >
-                                <form method="POST" action="pesquisa.php">
-                                    <input type="text" name="pesquisa" placeholder="PESQUISAR">
-                                    <input type="submit" >
-                                </form>
-
-
+                                <form action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method = "post" >
+                                    <input type = "search" name = "search" id = "search" placeholder = "Search Anything ..." >
+                                    <button type = "submit" ><i class="fa fa-search" aria-hidden = "true" ></i ></button >
+                                </form >
                             </div >
 
                             <!--Search Button-->

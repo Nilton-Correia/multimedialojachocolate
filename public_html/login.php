@@ -5,7 +5,7 @@ session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"])){
     if($_SESSION["loggedin"] == true && $_SESSION["tipo_user"]=="admin") {
-        header("location: administrar/adminis/ltr/indexadmin.php");
+        header("location: administrar/indexadmin.php");
     }else{
         header("location: welcome.php");
     }
@@ -74,7 +74,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             // Redirect user to welcome page
                             if($tipo=="admin") {
 
-                                header("location: administrar/adminis/ltr/indexadmin.php");
+                                header("location: administrar/indexadmin.php");
                             }else{
                                 header("location:welcome.php");
                             }

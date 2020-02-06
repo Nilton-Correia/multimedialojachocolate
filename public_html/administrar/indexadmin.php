@@ -7,6 +7,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
     exit;
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -20,12 +21,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
-    <title>Xtreme Admin Template - The Ultimate Multipurpose admin template</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>Santola-Candy</title>
     <!-- Custom CSS -->
-    <link href="../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link href="assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="../../dist/css/style.min.css" rel="stylesheet">
+    <link href="dist/css/style.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -57,22 +58,22 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <!-- ============================================================== -->
                 <!-- Logo -->
                 <!-- ============================================================== -->
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="indexadmin.php">
                     <!-- Logo icon -->
                     <b class="logo-icon">
                         <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                         <!-- Dark Logo icon -->
-                        <img src="../../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                        <img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
                         <!-- Light Logo icon -->
-                        <img src="../../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                        <img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
                     </b>
                     <!--End Logo icon -->
                     <!-- Logo text -->
                     <span class="logo-text">
                              <!-- dark Logo text -->
-                             <img src="../../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                             <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" />
                         <!-- Light Logo text -->
-                             <img src="../../assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
+                             <img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
                         </span>
                 </a>
                 <!-- ============================================================== -->
@@ -106,7 +107,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     <!-- User profile and search -->
                     <!-- ============================================================== -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
+                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
                         <div class="dropdown-menu dropdown-menu-right user-dd animated">
                             <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
                             <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i> My Balance</a>
@@ -136,7 +137,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     <li>
                         <!-- User Profile-->
                         <div class="user-profile d-flex no-block dropdown m-t-20">
-                            <div class="user-pic"><img src="../../assets/images/users/1.jpg" alt="users" class="rounded-circle" width="40" /></div>
+                            <div class="user-pic"><img src="assets/images/users/1.jpg" alt="users" class="rounded-circle" width="40" /></div>
                             <div class="user-content hide-menu m-l-10">
                                 <a href="javascript:void(0)" class="" id="Userdd" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <h5 class="m-b-0 user-name font-medium">Steave Jobs <i class="fa fa-angle-down"></i></h5>
@@ -149,23 +150,26 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings m-r-5 m-l-5"></i> Account Setting</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="logout.php"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
+                                    <a class="dropdown-item" href="../logout.php"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
                                 </div>
                             </div>
                         </div>
+
                         <!-- End User Profile-->
                     </li>
                     <li class="p-15 m-t-10"><a href="javascript:void(0)" class="btn btn-block create-btn text-white no-block d-flex align-items-center"><i class="fa fa-plus-square"></i> <span class="hide-menu m-l-5">Create New</span> </a></li>
                     <!-- User Profile-->
-                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.html" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
-                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="pages-profile.html" aria-expanded="false"><i class="mdi mdi-account-network"></i><span class="hide-menu">Profile</span></a></li>
-                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="table-basic.html" aria-expanded="false"><i class="mdi mdi-border-all"></i><span class="hide-menu">Table</span></a></li>
-                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="icon-material.html" aria-expanded="false"><i class="mdi mdi-face"></i><span class="hide-menu">Icon</span></a></li>
-                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="starter-kit.html" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Blank</span></a></li>
-                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="error-404.html" aria-expanded="false"><i class="mdi mdi-alert-outline"></i><span class="hide-menu">404</span></a></li>
-                    <li class="text-center p-40 upgrade-btn">
-                        <a href="https://wrappixel.com/templates/xtremeadmin/" class="btn btn-block btn-danger text-white" target="_blank">Upgrade to Pro</a>
-                    </li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="indexadmin.php" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="pages-profile.php" aria-expanded="false"><i class="mdi mdi-account-network"></i><span class="hide-menu">Profile</span></a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="table-basic." aria-expanded="false"><i class="mdi mdi-border-all"></i><span class="hide-menu">Table</span></a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="adicionarproduto.php" aria-expanded="false"><i class="mdi mdi-border-all"></i><span class="hide-menu">Adicionar Produto</span></a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="removerproduto.php." aria-expanded="false"><i class="mdi mdi-border-all"></i><span class="hide-menu">Remover Produto</span></a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="editar-utilizador.php" aria-expanded="false"><i class="mdi mdi-border-all"></i><span class="hide-menu">Editar Utilizador</span></a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="eliminar-utilizador.php" aria-expanded="false"><i class="mdi mdi-border-all"></i><span class="hide-menu">eliminar Utilizador</span></a></li>
+
+
+
+
                 </ul>
 
             </nav>
@@ -218,27 +222,49 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     <div class="card">
                         <div class="card-body">
                             <div class="d-md-flex align-items-center">
-                                <div>
-                                    <h4 class="card-title">Sales Summary</h4>
-                                    <h5 class="card-subtitle">Overview of Latest Month</h5>
+                                <div class="container has-text-centered">
+                                    <br class="box">
+                                    <p><a href="index.php" class="btn btn-black rounded-0">Pagina Inicial</a></p>
+                                    <br>
+                                    <form action="adicionarproduto.php" method="post" enctype="multipart/form-data">
+                                        <div class="field">
+                                            <div class="control">
+                                                <input name="nome" type="text" class="input is-large" placeholder="Nome Produto" autofocus>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <div class="control">
+                                                <input name="preco" type="text" class="input is-large" placeholder="Preço">
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <div class="control">
+                                                <input name="Descricao" class="input is-large" type="text" placeholder="Descrição do Produto">
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <div class="control">
+                                                <input name="desconto" type="text" class="input is-large"  placeholder="Desconto">
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <div class="control">
+                                                <input name="Categoria_ID_Categoria" type="text" class="input is-large" placeholder="id_categoria">
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <input type="file" name="imagens">
+                                        </div>
+                                        <br>
+                                        <button type="submit" class="button is-block is-link is-large is-fullwidth">Registar Produto</button>
+                                    </form>
                                 </div>
-                                <div class="ml-auto d-flex no-block align-items-center">
-                                    <ul class="list-inline font-12 dl m-r-15 m-b-0">
-                                        <li class="list-inline-item text-info"><i class="fa fa-circle"></i> Iphone</li>
-                                        <li class="list-inline-item text-primary"><i class="fa fa-circle"></i> Ipad</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <!-- column -->
-                                <div class="col-lg-12">
-                                    <div class="campaign ct-charts"></div>
-                                </div>
-                                <!-- column -->
                             </div>
                         </div>
-                    </div>
-                </div>
+
+
+
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
@@ -405,7 +431,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         <div class="comment-widgets scrollable">
                             <!-- Comment Row -->
                             <div class="d-flex flex-row comment-row m-t-0">
-                                <div class="p-2"><img src="../../assets/images/users/1.jpg" alt="user" width="50" class="rounded-circle"></div>
+                                <div class="p-2"><img src="assets/images/users/1.jpg" alt="user" width="50" class="rounded-circle"></div>
                                 <div class="comment-text w-100">
                                     <h6 class="font-medium">James Anderson</h6>
                                     <span class="m-b-15 d-block">Lorem Ipsum is simply dummy text of the printing and type setting industry. </span>
@@ -420,7 +446,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                             </div>
                             <!-- Comment Row -->
                             <div class="d-flex flex-row comment-row">
-                                <div class="p-2"><img src="../../assets/images/users/4.jpg" alt="user" width="50" class="rounded-circle"></div>
+                                <div class="p-2"><img src="assets/images/users/4.jpg" alt="user" width="50" class="rounded-circle"></div>
                                 <div class="comment-text active w-100">
                                     <h6 class="font-medium">Michael Jorden</h6>
                                     <span class="m-b-15 d-block">Lorem Ipsum is simply dummy text of the printing and type setting industry. </span>
@@ -437,7 +463,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                             </div>
                             <!-- Comment Row -->
                             <div class="d-flex flex-row comment-row">
-                                <div class="p-2"><img src="../../assets/images/users/5.jpg" alt="user" width="50" class="rounded-circle"></div>
+                                <div class="p-2"><img src="assets/images/users/5.jpg" alt="user" width="50" class="rounded-circle"></div>
                                 <div class="comment-text w-100">
                                     <h6 class="font-medium">Johnathan Doeting</h6>
                                     <span class="m-b-15 d-block">Lorem Ipsum is simply dummy text of the printing and type setting industry. </span>
@@ -539,22 +565,22 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <!-- ============================================================== -->
 <!-- All Jquery -->
 <!-- ============================================================== -->
-<script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="assets/libs/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap tether Core JavaScript -->
-<script src="../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
-<script src="../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../../dist/js/app-style-switcher.js"></script>
+<script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
+<script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="dist/js/app-style-switcher.js"></script>
 <!--Wave Effects -->
-<script src="../../dist/js/waves.js"></script>
+<script src="dist/js/waves.js"></script>
 <!--Menu sidebar -->
-<script src="../../dist/js/sidebarmenu.js"></script>
+<script src="dist/js/sidebarmenu.js"></script>
 <!--Custom JavaScript -->
-<script src="../../dist/js/custom.js"></script>
+<script src="dist/js/custom.js"></script>
 <!--This page JavaScript -->
 <!--chartis chart-->
-<script src="../../assets/libs/chartist/dist/chartist.min.js"></script>
-<script src="../../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-<script src="../../dist/js/pages/dashboards/dashboard1.js"></script>
+<script src="assets/libs/chartist/dist/chartist.min.js"></script>
+<script src="assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+<script src="dist/js/pages/dashboards/dashboard1.js"></script>
 </body>
 
 </html>

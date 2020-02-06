@@ -43,7 +43,7 @@ $totalCarts  = getTotalCart($pdoConnection);
     <div class="card mt-5">
         <div class="card-body">
             <h4 class="card-title">Carrinho</h4>
-            <a href="index.php">Lista de Produtos</a>
+            <a href="welcome.php">Lista de Produtos</a>
         </div>
     </div>
 
@@ -84,7 +84,7 @@ $totalCarts  = getTotalCart($pdoConnection);
 
             </table>
 
-            <a class="btn btn-info" href="index.php">Continuar Comprando</a>
+            <a class="btn btn-info" href="welcome.php">Continuar Comprando</a>
             <button class="btn btn-primary" type="submit">Atualizar Carrinho</button>
 
         </form>
