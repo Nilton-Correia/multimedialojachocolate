@@ -14,7 +14,7 @@ if (mysqli_connect_errno()){
 }
 
 //Conexao com Banco de Dados
-return new PDO(sprintf("mysql:host=%s;dbname=%s", DB_HOST, DB_NAME), DB_USER, DB_PASS);
-
+return new PDO(sprintf("mysql:host=%s;dbname=%s", DB_HOST, DB_NAME), DB_USER, DB_PASS,
+array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 
 ?>
