@@ -25,7 +25,8 @@
             echo'<tr> 
             <td>'.$row['Codigo_Postal'].'</td>
             <td>'.$row['Localidade'].'</td>
-           
+           <td><a href="eliminar-codigo_postal.php?id='.$row['Codigo_Postal'].'"> Eliminar</a></td>
+            <td><a href="editar_codigo_postal.php?id='.$row['Codigo_Postal'].'"> Editar</a></td>
             </tr>';
         }
     }
