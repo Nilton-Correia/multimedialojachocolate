@@ -14,7 +14,7 @@
         <th>Nome</th>
         <th>Email</th>
         <th>Telefone</th>
-        <td><a href="eliminar-utilizador.php"> Adicionar</a></td>
+        <td><a href="Adicionar-utilizador.php"> Adicionar</a></td>
     </tr>
     </thead>
     <?php
@@ -27,7 +27,7 @@
             <td>'.$row['email'].'</td>
             <td>'.$row['phone'].'</td>
             <td><a href="eliminar-utilizador.php?id='.$row['id'].'"> Eliminar</a></td>
-            <td><a href="eliminar-utilizador.php?id='.$row['id'].'"> Editar</a></td>
+            <td><a href="Editar-utilizador.php?id='.$row['id'].'"> Editar</a></td>
             </tr>';
         }
     }

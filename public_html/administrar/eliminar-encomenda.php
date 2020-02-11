@@ -3,13 +3,13 @@ session_start();
 require ("../config.php");
 
 
-$produto = $_GET['Id_Produto'];
-$deleta ="DELETE FROM produto WHERE ID_Produto = $produto";
+$encomenda = $_GET['ID_Encomenda'];
+$deleta ="DELETE FROM encomenda WHERE encomenda = $encomenda";
 $resultado=$con->query($deleta);
 
 if ($resultado=$con->query($deleta)) {
     echo "O registro foi excluido";
-    header( "location: produto.php");
+    header( "location: encomenda.php");
 } else {
 
 

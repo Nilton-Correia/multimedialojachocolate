@@ -10,10 +10,10 @@ session_start();
 require ("../config.php");
 
 if($_GET){
-    $produto = $_GET['id'];
-    $editar ="Select * FROM produto WHERE ID_Produto = $produto";
+    $produto = $_GET['ID_Produto'];
+    $editarr ="Select * FROM produto WHERE ID_Produto = $produto";
 
-    if ($resultado=$con->query($editar)) {
+    if ($resultado=$con->query($editarr)) {
         $row=$resultado->fetch_assoc();
     } else {
 
@@ -23,7 +23,7 @@ if($_GET){
 }
 
 if($_POST){
-    $id=$_POST['id'];
+    $id=$_POST['ID_Produto'];
     $nome=$_POST['nome'];
     $editarr ="Update produto  set nome='$nome' WHERE ID_Produto = $id";
 
